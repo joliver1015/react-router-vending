@@ -1,0 +1,10 @@
+.Starburst {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.Starburst .message {
+    border-radius: 30px;
+}

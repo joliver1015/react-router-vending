@@ -1,0 +1,14 @@
+.NavBar {
+    background-color: black;
+    justify-content: center;
+}
+
+.NavBar a {
+    color:whitesmoke;
+    margin-left: 20px;
+}
+
+.NavBar a.active {
+    color:lime;
+    font-weight: bold;
+}

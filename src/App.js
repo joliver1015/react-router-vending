@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+import VendingMachine from "./VendingMachine"
+import Soda from "./Soda";
+import Starburst from "./Starburst";
+import Chips from "./Chips";
+import NavBar from "./NavBar"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+      <NavBar />
+        <Switch>
+          <Route path="/" exact>
+            <VendingMachine />
+          </Route>
+          <Route  path="/chips" exact>
+            <Chips />
+          </Route>
+          <Route path="/soda" exact >
+            <Soda />
+          </Route>
+          <Route  path="/starburst" exact>
+            <Starburst />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
